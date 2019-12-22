@@ -1,0 +1,25 @@
+{
+  "name": "comfort-taxi-sg-receipts",
+  "version": "0.0.0",
+  "description": "Extracts and tallies a folder of receipt from Comfort Taxi Singapore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bguiz/comfort-taxi-sg-receipts.git"
+  },
+  "keywords": [
+    "pdf",
+    "receipts"
+  ],
+  "author": "bguiz",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bguiz/comfort-taxi-sg-receipts/issues"
+  },
+  "homepage": "https://github.com/bguiz/comfort-taxi-sg-receipts#readme",
+  "dependencies": {
+  }
+}
