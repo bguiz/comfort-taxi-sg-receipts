@@ -17,7 +17,7 @@ function processPdfText (text) {
       return {
         licencePlate: line.trim(),
       };
-    } else if (line === 'CASH') {
+    } else if (line === 'CASH' || line === 'NETS') {
       // What are the other payment modes?
       return {
         paymentMode: line,
@@ -31,6 +31,12 @@ function processPdfText (text) {
       };
     } else {
       const parts = line.split(/[\s]{2,}/);
+      if (!parts[0] || !parts[1]) {
+        console.error('UNPARSEABLE:', line);
+        return {
+          [`UNPARSEABLE_LINE_#${index}`]: line,
+        };
+      }
       const key = trimAndCamelCase(parts[0]);
       let value = parts[1].trim();
       if (key === 'distanceRun') {
